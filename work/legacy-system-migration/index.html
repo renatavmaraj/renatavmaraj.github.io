@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Migrating a 15-year-old legacy checkout system | Renata Maraj</title>
+<meta name="description" content="How Renata Maraj led a cross-org migration off a legacy checkout system, using transparency and data instead of authority to get buy-in.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="site-header">
+    <a class="home-link" href="/">Renata Maraj</a>
+    <nav>
+      <a href="/work/" aria-current="page">Work</a>
+      <a href="/writing/">Writing</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </header>
+
+  <main class="prose">
+    <h1>Migrating a 15-year-old legacy checkout system</h1>
+    <p class="byline">10 months · cross-org migration</p>
+
+    <p>A legacy checkout application, over a decade old, was still carrying a meaningful share of live checkout traffic when it landed on my team, after several managers before me had tried and failed to retire it. It was a sprawling monolith touching billing and subscriptions, guest checkout, and an SDK team, and my org was the one stuck owning it: reliability, security patching, bug fixing, and general maintenance, a growing burden as fewer engineers company-wide still knew the aging framework it was built on. Its existence was also actively blocking new products from shipping.</p>
+
+    <p>The mandate was clear. 100% of checkout traffic needed to move onto the new application. Migrations like this tend to fail for a more human reason though: nobody outside your own org has any real incentive to prioritize your legacy problem over their own roadmap. So instead of asking other teams to trust me, I gave them a reason to. I paired with the strongest engineer on my team, a real force multiplier, and together we went through every endpoint that needed instrumenting, building a shared dashboard that showed, transparently, exactly how much of the remaining traffic was ours versus theirs. That one artifact did more to earn buy-in than any amount of asking could have. It let my director align the other teams' leadership, and it let me work endpoint by endpoint directly with each team's engineering manager and PM, on their timeline, with visible proof of progress the whole way through.</p>
+
+    <p>Beyond the migration itself, I helped establish the new architecture paradigm the org was moving toward, one that unified routing, authentication, and performance strategy, working closely with the routing team on how the new system should behave. I led functional parity for the new application, making sure one-time checkout experiences held up throughout the migration, all without much support from a PMO to coordinate the work across teams.</p>
+
+    <p>The real challenge wasn't tracking the work. It was getting buy-in. Each team had to spend real engineering time actually migrating their own endpoints, but none of them owned the cost of leaving the legacy app running, so without something forcing the issue, that work could always slide behind their own roadmap. The SDK team in particular took sustained effort to bring on board, largely because they were understaffed and this competed directly with everything else already on their plate. The transparent dashboard became the forcing function: once every team could see exactly how much of the remaining traffic was theirs to fix, it was much harder to keep deprioritizing it indefinitely.</p>
+
+    <p>That dashboard wasn't trustworthy out of the box, either. Several endpoints kept showing what looked like millions of requests per minute, far more traffic than the legacy app itself could possibly have been serving. It turned out those endpoints were firing any time a checkout button rendered across a range of integrations, not only when the actual legacy application loaded. Untangling that noise from the real signal took close collaboration with Product, who understood which experiences were actually still live and which could be safely updated or turned off.</p>
+
+    <p>After 10 months, our share of traffic on the legacy app dropped from 3% to 0.1%, and we fully handed it off to the team that still had real usage of it, lifting years of accumulated release and maintenance burden off a team that had been quietly carrying it for far too long.</p>
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2026 Renata Maraj</span>
+    <span class="links">
+      <a href="mailto:renatamaraj@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/renatamaraj/">LinkedIn</a>
+      <a href="https://github.com/renatavmaraj">GitHub</a>
+      <a href="https://app.thestorygraph.com/profile/renatavmaraj">StoryGraph</a>
+    </span>
+  </footer>
+
+</div>
+</body>
+</html>
