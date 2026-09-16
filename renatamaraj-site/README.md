@@ -1,4 +1,4 @@
-# renatamaraj.com — setup instructions
+# renatamaraj.com setup instructions
 
 ## 1. Create the GitHub repo
 1. Go to github.com (log in as renatavmaraj), click **New repository**.
@@ -9,7 +9,7 @@
 ## 2. Upload these files
 Easiest way with no command line:
 1. On the new repo's page, click **Add file → Upload files**.
-2. Drag in *everything inside this folder* (index.html, about/, work/, writing/, contact/, assets/, CNAME, README.md) — keep the folder structure intact.
+2. Drag in *everything inside this folder* (index.html, about/, work/, writing/, contact/, assets/, CNAME, README.md), and keep the folder structure intact.
 3. Commit directly to the `main` branch.
 
 (If you're comfortable with git/terminal, `git init`, add this folder's contents, commit, and `git push` to the repo instead.)
@@ -44,8 +44,8 @@ DNS changes can take anywhere from a few minutes to 24 hours to fully propagate.
 
 ## Adding a new blog post later
 1. Duplicate any existing page's folder (e.g. `about/`) as `writing/your-post-slug/`.
-2. In the new `index.html`, replace the `<main class="prose">` content with your post title and text — leave the `<head>`, header, and footer as they are.
+2. In the new `index.html`, replace the `<main class="prose">` content with your post title and text. Leave the `<head>`, header, and footer as they are.
 3. Add a teaser block for it near the top of `writing/index.html`'s `<main>` (there's a comment there showing the format).
-4. Upload/commit both changed files to GitHub — the live site updates automatically within a minute or two.
+4. Upload/commit both changed files to GitHub. The live site updates automatically within a minute or two.
 
 Or just come back here and ask Claude to write and add the post for you.

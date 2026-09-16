@@ -1,16 +1,17 @@
 /* Renata Maraj — personal site
    Tokens
-   Color:  bg #FAFAF7 · ink #171A17 · ink-soft #5B6259 · accent #1F6F5C · accent-hover #298A73 · line #E2DFD6
+   Color:  bg #F4EEE0 · ink #2B3A4A · ink-soft #6B6255 · accent #6E7F5C · accent-hover #5A6A4A · line #DED3BC
+   (Muted mid-century palette: warm cream, denim ink, sage accent, sand line)
    Type:   Newsreader (display/serif) + Inter (body/ui)
 */
 
 :root {
-  --bg: #FAFAF7;
-  --ink: #171A17;
-  --ink-soft: #5B6259;
-  --accent: #1F6F5C;
-  --accent-hover: #298A73;
-  --line: #E2DFD6;
+  --bg: #F4EEE0;
+  --ink: #2B3A4A;
+  --ink-soft: #6B6255;
+  --accent: #6E7F5C;
+  --accent-hover: #5A6A4A;
+  --line: #DED3BC;
   --max: 42rem;
 }
 

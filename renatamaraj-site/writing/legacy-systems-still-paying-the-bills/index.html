@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Legacy systems are still paying the bills | Renata Maraj</title>
+<meta name="description" content="An essay on why the systems companies are least proud of are often the ones quietly funding everything else, and what that means for how you manage them.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="site-header">
+    <a class="home-link" href="/">Renata Maraj</a>
+    <nav>
+      <a href="/work/">Work</a>
+      <a href="/writing/" aria-current="page">Writing</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </header>
+
+  <main class="prose">
+    <h1>Legacy systems are still paying the bills</h1>
+    <p class="byline">September 2026</p>
+
+    <p>Ask most engineering leaders what they're proud of. You'll hear about the migration, the rewrite, the new platform. Ask what's actually generating revenue today, and the answer is often the system nobody wants to claim credit for. That gap isn't a sign that legacy work matters more than new work. It's a sign that legacy systems are one of the most honest diagnostics an org has, and most leaders never bother to run it.</p>
+
+    <p>Here's the check. Do you actually know who understands your oldest business-critical system? Not who owns it on an org chart. Who could actually explain how it works, what it integrates with, and why it behaves the way it does.</p>
+
+    <p>If it went down tonight, how many people could you call, and how fast would they need to be found? If it's quietly bleeding money right now through some inefficiency nobody's looked at in years, would anyone even notice? The answers tell you more than most people expect. I've watched teams reconstruct a system's behavior from logs and trial and error. The one person who could have just explained it in five minutes was already gone.</p>
+
+    <p>This gets more obvious the older a company gets. I spent years at PayPal, one of the oldest fintech companies still operating, and some of what's running in production there predates most startups' entire existence. Systems pushing 15 years old.</p>
+
+    <p>That's a different category of problem than what most companies deal with. A five-year-old legacy system is inconvenient. A 15-year-old one has survived multiple rewrites, several generations of engineers, and probably a few reorgs. And it's still processing real transactions the whole time. The older fintech gets as an industry, the more of this it's going to be managing, not less.</p>
+
+    <p>The risk isn't really the code. It's that legacy systems are usually the least documented systems in the company. They were built before anyone thought documentation would matter, by people who understood it well enough that they never needed to write it down.</p>
+
+    <p>A layoff doesn't check who's the last person who understands a critical integration before it happens. And hiring doesn't replace what walked out the door either. Interview loops are built to staff for the roadmap, not for what's currently running production. Nobody gets asked whether they're comfortable in a decade-old codebase. So companies keep hiring for the stack they wish they had, and the stack that's actually making money quietly ages without anyone new coming in who's equipped to touch it. Eventually the only people who can safely operate the system are the same handful who've been there since it was built. Every one of them who leaves takes a piece of institutional risk with them that never shows up in a postmortem, because nothing broke yet.</p>
+
+    <p>The fix I actually believe in isn't documentation for its own sake. It's instrumentation. If you want people, including leadership, to take a legacy system seriously, stop describing the problem and start measuring it. How many engineering hours a quarter go into just keeping it alive. How long it takes a new hire to become productive on it compared to anything else on the team. How much onboarding time gets burned re-explaining the same workarounds because nothing's written down. Put a number on it, and "it's annoying" turns into "it's costing us six figures a year in engineering time nobody planned for." That's the conversation that actually gets budget and headcount, not a slide that says "tech debt."</p>
+
+    <p>I've done exactly this. When I inherited a legacy checkout system that had outlived two prior attempts to retire it, I paired with the strongest engineer on my team. Together we built a dashboard that showed, transparently, exactly how much of the remaining traffic belonged to each stakeholder team.</p>
+
+    <p>Before that existed, one team in particular, already understaffed, kept letting their piece of the migration slide behind everything else on their plate. Nobody could point to a number and say it was theirs to fix. Once every team could see their own share of the traffic instead of just hearing me say it was a problem, it got a lot harder to keep deprioritizing it indefinitely. That's the part I actually care about. Legacy systems don't get neglected because nobody notices the pain. They get neglected because the pain never gets translated into something a team can actually see is theirs. Do that translation yourself, and you'd be surprised how fast priorities shift.</p>
+
+    <p>The cultural piece still matters too. Somebody on your team has to actually want to be the person who understands the old system well, and that won't happen if all the visibility and credit goes to whoever ships the new thing.</p>
+
+    <p>There's a subtler cost too. Legacy code often encodes decisions nobody remembers making. Business rules, compliance exceptions, quirks that exist because of some incident years ago, never written down anywhere except as a conditional buried in an old file. Migrate off a system like that without deeply understanding it first, and you don't just risk technical bugs. You risk silently dropping business logic that mattered, because the only documentation of it was the code itself.</p>
+
+    <p>As a manager, I've learned my job isn't necessarily to be the person who understands the old system best. It's to make sure that understanding isn't concentrated in one person at all.</p>
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2026 Renata Maraj</span>
+    <span class="links">
+      <a href="mailto:renatamaraj@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/renatamaraj/">LinkedIn</a>
+      <a href="https://github.com/renatavmaraj">GitHub</a>
+      <a href="https://app.thestorygraph.com/profile/renatavmaraj">StoryGraph</a>
+    </span>
+  </footer>
+
+</div>
+</body>
+</html>
